@@ -22,9 +22,9 @@ class Gladiator {
 
 const gladiatorList = [];
 
-// Number of gladiators (You can set it manually using start(x) command in console, where you)
+// Number of gladiators (You can set it manually using start(x) command in console, where x is the number)
 
-let gladiators = 10;
+let gladiators = 4;
 
 // Function that instantiates new gladiators
 
@@ -110,13 +110,13 @@ function gladiatorAttack(id) {
       (gladiatorList[id].health / gladiatorList[id].initialHealth);
     setTimeout(() => {
       internalCallback();
-    }, 500 / speed);
+    }, 5000 / speed);
   }
 
   // Initial Timeout with initial speed
   setTimeout(() => {
     internalCallback();
-  }, 500 / gladiatorList[id].initialSpeed);
+  }, 5000 / gladiatorList[id].initialSpeed);
 }
 
 // Setting up start function

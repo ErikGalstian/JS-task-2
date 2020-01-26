@@ -10,6 +10,36 @@
       type="text/javascript"
     ></script>
     <script src="./javascript.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>Asynchronous Rome Battle</h1>
+    <main>
+      <div id="log"></div>
+
+      <script type="text/javascript">
+        let console = {};
+        let logger = document.getElementById('log');
+        console.log = text => {
+          let element = document.createElement('div');
+          let txt = document.createTextNode(text);
+          element.appendChild(txt);
+          logger.appendChild(element);
+        };
+      </script>
+    </main>
+    <footer>
+      <input
+        type="text"
+        placeholder="Enter the number of gladiators to fight"
+        id="myInput"
+      />
+      <button
+        type="button"
+        onclick="start(document.getElementById(`myInput`).value);"
+      >
+        Start fight!
+      </button>
+    </footer>
+  </body>
 </html>
